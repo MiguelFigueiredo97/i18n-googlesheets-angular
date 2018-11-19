@@ -129,6 +129,41 @@
           }
         }
       }
+    },
+    "i18n-googlesheets-angular": {
+      "root": "projects/i18n-googlesheets-angular",
+      "sourceRoot": "projects/i18n-googlesheets-angular/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/i18n-googlesheets-angular/tsconfig.lib.json",
+            "project": "projects/i18n-googlesheets-angular/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/i18n-googlesheets-angular/src/test.ts",
+            "tsConfig": "projects/i18n-googlesheets-angular/tsconfig.spec.json",
+            "karmaConfig": "projects/i18n-googlesheets-angular/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/i18n-googlesheets-angular/tsconfig.lib.json",
+              "projects/i18n-googlesheets-angular/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "i18n-angular"

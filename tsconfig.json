@@ -16,6 +16,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "i18n-googlesheets-angular": [
+        "dist/i18n-googlesheets-angular"
+      ],
+      "i18n-googlesheets-angular/*": [
+        "dist/i18n-googlesheets-angular/*"
+      ]
+    }
   }
 }

@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <form (ngSubmit)="onAddedKey(f)" #f="ngForm">
+                <div class="row">
+                    <div class="col-sm-5 form-group">
+                        <label for="apiKey"> Google API Key </label>
+                        <input type="text" id="apiKey" class="form-control" name="apiKey" ngModel>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <button class="btn btn-sucess" type="submit">Go!</button>
+                    </div>
+                </div>
+            </form>
+            <form (ngSubmit)="onAddedSheet(s)" #s="ngForm">
+                <div class="row">
+                    <div class="col-sm-5 form-group">
+                        <label for="spreadSheet"> Google SpreadSheet </label>
+                        <input type="text" id="spreadSheet" class="form-control" name="spreadSheet" ngModel>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <button class="btn btn-sucess" type="submit">Go!</button>
+                    </div>
+                </div>
+            </form>
+            <div class="row">
+                <div class="col-xs-12">
+                    <form (ngSubmit)="onChangedLanguage(g)" #g="ngForm">
+                        <div class="row">
+                            <div class="col-sm-5 form-group">
+                                <label for="language"> Language </label>
+                                <input type="text" id="language" class="form-control" name="language" ngModel>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <button class="btn btn-sucess" type="submit">Go!</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <h1>{{message('helloworld')}}</h1>
+        <h3>{{message('language')}}</h3>
+        <h3>{{message('version')}}</h3>
